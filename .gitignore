@@ -1,0 +1,6 @@
+.DS_Store
+examples/weapp/config/
+examples/web/my-app/config/
+lib/
+node_modules
+package-lock.json
