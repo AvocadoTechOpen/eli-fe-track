@@ -13,6 +13,10 @@
     "log"
   ],
   "author": "wanlexiang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvocadoTechOpen/eli-fe-track.git"
+  },
   "license": "ISC",
   "dependencies": {
     "@aliyun-sls/web-track-browser": "0.0.3",
