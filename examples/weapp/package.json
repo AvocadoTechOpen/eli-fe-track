@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "日志sdk引入测试",
   "dependencies": {
-    "eli-fe-track": "^0.1.1"
+    "eli-fe-track": "^1.0.0-beta.1"
   },
   "devDependencies": {},
   "scripts": {

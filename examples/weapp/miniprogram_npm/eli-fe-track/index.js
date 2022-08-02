@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1659346355486, function(require, module, exports) {
+__DEFINE__(1659407685618, function(require, module, exports) {
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -18,8 +18,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var _default = _index["default"];
 exports["default"] = _default;
-}, function(modId) {var map = {"./logService/index":1659346355487}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1659346355487, function(require, module, exports) {
+}, function(modId) {var map = {"./logService/index":1659407685619}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1659407685619, function(require, module, exports) {
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -483,8 +483,8 @@ var Logger = /*#__PURE__*/function () {
 var _default = new Logger();
 
 exports["default"] = _default;
-}, function(modId) { var map = {"../utils/wxUtil":1659346355488,"../utils/util":1659346355489,"../types":1659346355490,"../config":1659346355491,"./WxRealtimeLogManager.js":1659346355492}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1659346355488, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/wxUtil":1659407685620,"../utils/util":1659407685621,"../types":1659407685622,"../config":1659407685623,"./WxRealtimeLogManager.js":1659407685624}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1659407685620, function(require, module, exports) {
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -547,7 +547,7 @@ var getUuid = function getUuid() {
 
 exports.getUuid = getUuid;
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1659346355489, function(require, module, exports) {
+__DEFINE__(1659407685621, function(require, module, exports) {
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -733,7 +733,7 @@ var getBrowserInfo = function getBrowserInfo() {
 
 exports.getBrowserInfo = getBrowserInfo;
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1659346355490, function(require, module, exports) {
+__DEFINE__(1659407685622, function(require, module, exports) {
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -763,7 +763,7 @@ var LogType = {
 };
 exports.LogType = LogType;
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1659346355491, function(require, module, exports) {
+__DEFINE__(1659407685623, function(require, module, exports) {
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -815,7 +815,7 @@ var defaultConfig = {
 };
 exports.defaultConfig = defaultConfig;
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1659346355492, function(require, module, exports) {
+__DEFINE__(1659407685624, function(require, module, exports) {
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -880,7 +880,7 @@ function createRealtimeLogManager(version) {
   };
 }
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1659346355486);
+return __REQUIRE__(1659407685618);
 })()
 //miniprogram-npm-outsideDeps=["@aliyun-sls/web-track-browser","@aliyun-sls/web-track-mini"]
 //# sourceMappingURL=index.js.map
