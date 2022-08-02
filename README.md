@@ -63,7 +63,6 @@ Base 目前支持以下配置项：
 | SlsImmediate | string |  否  |  'true'  | 立即上报Sls日志 |
 | Console | boolean |  否  |  true  | 是否开启 console 日志 |
 | SlsTracker | boolean |  否  |  false  | 是否开启 sls 上报 |
-| ArmsMonitor | boolean |  否  |  false  | 是否开启 arms 上报 |
 | WxRealTimeLog | boolean |  否  |  false  | 是否开启小程序实时日志|
 
 ## 日志上报

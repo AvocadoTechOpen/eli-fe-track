@@ -24,41 +24,43 @@ class Logger {
    * @param {*} opts
    */
   config(opts = defaultConfig) {
-    return new Promise( async(resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       try {
         this.options.Base = { ...this.options.Base, ...opts.Base }
         const { platform, appId, SlsTracker, WxRealTimeLog, showConfigInfo, version } = this.options.Base
-  
+
         // TODO 小程序导入web端包，会报错，还需要验证
         // web端需要传入 appId
         if (platform === 'web' && !appId) {
           console.log('请传入appId, 作为程序标识 !!!')
           return
         }
-  
+
         // sls 初始化
         if (SlsTracker && this._verifySlsConfig(opts.SlsTracker)) {
           this.options.SlsTracker = { ...defaultConfig.SlsTracker, ...opts.SlsTracker }
           if (platform === 'web') {
-            const { default: SlsTrackerBrowser} = await import('@aliyun-sls/web-track-browser')
+            const { default: SlsTrackerBrowser } = await import('@aliyun-sls/web-track-browser')
             this.tracker = new SlsTrackerBrowser(this.options.SlsTracker)
           } else {
             const { default: SlsTrackerMini } = await import('@aliyun-sls/web-track-mini')
             this.tracker = new SlsTrackerMini(this.options.SlsTracker)
           }
         }
-  
+
         // 微信后台实时日志初始化
         if (WxRealTimeLog) {
-          const { default: { createRealtimeLogManager }} = await import('./WxRealtimeLogManager.js')
+          const {
+            default: { createRealtimeLogManager }
+          } = await import('./WxRealtimeLogManager.js')
           this.WxRealtimeLogManager = createRealtimeLogManager(version)
         }
-  
+
         // 小程序端自动上报系统信息
         if (platform === 'mini') {
           this.sendSysInfo()
         }
-  
+
         // config 调用完成
         this.initState = true
         showConfigInfo && console.log('Logger config:', this.options)
@@ -203,7 +205,7 @@ class Logger {
     }
     this.send(params)
   }
-  
+
   // 格式化数据
   _formatData(data) {
     // TraceId: appId_uuid
@@ -317,7 +319,6 @@ class Logger {
     if (this.options.Base.WxRealTimeLog) {
       this.WxRealtimeLogManager && this.WxRealtimeLogManager[data.LogLevel](data.event, data)
     }
-
   }
 }
 

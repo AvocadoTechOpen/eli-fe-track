@@ -21,8 +21,8 @@ export const defaultConfig = {
     topic: 'topic', // 自定义日志主题。
     source: 'source',
     tags: {
-      tags: 'tags',
-    },
+      tags: 'tags'
+    }
   },
   ArmsMonitor: {},
   WxRealTimeLog: {}
